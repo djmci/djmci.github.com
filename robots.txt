@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /blog/images
+Disallow: /blog/mov
+Disallow: /blog/swf
+Disallow: /zero
+Disallow: /uts
+Disallow: /clients

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<base href="http://djmci.github.com/blog" />
+
+<meta charset="UTF-8" />
+<title>Flash isometric engine | shiftperception.com</title>
+
+<link rel="stylesheet" href="http://djmci.github.com/blog/wp-content/themes/pink-touch-sp/style.css" type="text/css" media="screen" />
+
+<meta name='robots' content='noindex,nofollow' />
+
+
+
+<link rel='stylesheet' id='arvo-css'  href='http://fonts.googleapis.com/css?family=Arvo%3A400%2C700&#038;ver=3.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://djmci.github.com/blog/wp-includes/js/comment-reply.js?ver=20090102'></script>
+
+ 
+
+<link rel='next' title='Ruby&#8217;s first day' href='http://djmci.github.com/blog/2006/09/05/rubys-first-day/' />
+
+<link rel='canonical' href='http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/' />
+<link rel='shortlink' href='http://djmci.github.com/blog/?p=7' />
+</head>
+
+<body class="single single-post postid-7 single-format-standard">
+	<div id="wrapper">
+		<div id="navigation">
+			<div class="wrapper wide-wrapper clearfix">
+				<div id="nav-menu" class="menu-postacrds-container"><ul id="menu-postacrds" class="menu"><li id="menu-item-893" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-893"><a href="/">Home</a></li>
+<li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892"><a href="http://djmci.github.com/blog/projects/">Projects</a></li>
+<li id="menu-item-884" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-884"><a href="http://djmci.github.com/blog/category/postacrds/">Postcards</a></li>
+<li id="menu-item-886" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-886"><a href="http://djmci.github.com/blog/category/development/">Development</a></li>
+<li id="menu-item-887" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-887"><a href="http://djmci.github.com/blog/category/interaction/">Interaction</a></li>
+<li id="menu-item-888" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-888"><a href="http://djmci.github.com/blog/category/design/">Design</a></li>
+<li id="menu-item-889" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-889"><a href="http://djmci.github.com/blog/category/thoughts/">Thoughts</a></li>
+<li id="menu-item-890" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-890"><a href="http://djmci.github.com/blog/category/desktops/">Desktops</a></li>
+<li id="menu-item-891" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-891"><a href="http://djmci.github.com/blog/category/essays/">Essays</a></li>
+</ul></div>			</div>
+		</div><!-- /#navigation -->
+		<div id="navigation-frill"></div>
+
+		<div id="header">
+			<p class="blog-tag"><a href="http://djmci.github.com/blog/" title="shiftperception.com" rel="home">shiftperception.com</a></p>
+
+			<div id="description">
+				<p></p>
+			</div>
+		</div><!-- /#header -->
+
+		<div id="content">
+
+
+	
+<div id="post-7" class="post-7 post type-post status-publish format-standard hentry category-development category-interaction tag-web-dev tag-interaction">
+		<div class="date">
+		<a href="http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/" title="Permalink to Flash isometric engine" rel="bookmark">
+							<p><span class="day">02</span>Sep / 2006</p>
+					</a>
+	</div>
+	
+	<div class="content">
+		<h1 class="entry-title"><a href="http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/" title="Permalink to Flash isometric engine" rel="bookmark">Flash isometric engine</a></h1>
+
+		<div class="entry-content">
+			<p>At the start of this year I began work on an <a href="http://www.kleenexpuppy.com.au/UltimatePuppyAdventure.asp">isometric engine</a> for a Flash game I was developing at work. Now there are <a href="http://www.amazon.com/Macromedia-Flash-2004-Game-Programming/sim/1592000363/1/ref=pd_sexpl_esi/002-2280201-2946441">heap of books</a> that deal with the logic of game dev in Flash, and to get me started, I went out and bought <a href="http://www.amazon.com/Macromedia-Flash-2004-Design-Demystified/dp/0735713987/ref=pd_sxp_grid_i_1_0/002-2280201-2946441?ie=UTF8">Flash game dev demystified</a>.</p>
+<p>Now, because I was specifically interested in isometric engines, and knowing a fair bit about Flash already, I thought that reading the whole book wouldn&#8217;t really be a worthwhile experience&#8230; but I was wrong. It turned out to be a great read, and even though in my engine I didn&#8217;t really use much of the new knowledge I gained, it certainly helped round out some missing information &#8211; in particular basic physics.</p>
+<p>Another good source of information was the web, most notably <a href="http://www.kirupa.com/developer/flash/index.htm#Isometry">Kirupa</a>, a site which continues to be a great source of information and techniques, and includes posts from the endlessly giving Senocular. There were more, but I can&#8217;t lay my hands on the addresses at the moment. The important thing to note though, was that both the books and the web had similar and differring ways to approach the same problem &#8211; which is a truth for EVERYTHING in Flash. And by exposing myself to them all, I was able to understand enough to get me a long way into my own attempt at an isometric engine.</p>
+<p>So, why the rant? Well, I wanted to share with you some things that I&#8217;ve learnt from the experience, and for what it&#8217;s worth, here they are :</p>
+<p><em>NB : The isometric engine I worked on was for Flash player 7. If you were unaware, Flash player 8 and above do many things MUCH MUCH better than 7, and this information is probably irrelevant for the newer Flash players &#8211; but very relevant if you are still making content for Flash player 7.</em></p>
+<p><strong>1. Optimizing code performance at runtime AND at compilation stage.</strong><br />
+I was fortunate enough to come across <a href="http://www.oddhammer.com/actionscriptperformance/">Odd Hammer</a> which outlines various techniques to make your Flash movie run better when exported from various Flash IDEs. Ill let you read al the good stuff there&#8230; its well worth it. What I was unaware of was that writing things in different ways at author time could effect quite dramatically performance at runtime.</p>
+<p><strong>2. Extensibility</strong><br />
+I stuck with XML to feed my engine. It began using a similar format that other engines used, but as I wanted to add more interesting interactions, I found that I had to extend it. But thats the beauty of XML. On that same token, I also load all my tile artwork in at runtime, so that I can have various levels each with their own look and feel, and not affect the base file size of my SWF.</p>
+<p><strong>3. Limitations</strong><br />
+The biggest limitation to the approach that I took concerned controlling the speed of the action. Because I introduced depth (that is, stepping up or down stairs or a platform) it became impossible to control the speed of character movement in the isometric world more than regular speed and half speed. </p>
+<p>This was because if I moved a character in any direction at less than half a tile&#8217;s size, at some stage he would be slightly over the next tile. Normally, not a problem. But because in my world that next tile could also be a step up or down and in any direction, this meant I had to manage the swapDepth of the character in relation to each individual tile, rather than just a single movieclip containing the floor. </p>
+<p><strong>4. Artwork and workarounds</strong><br />
+The engine I made was designed to have many levels each with different artwork. One thing I tried to do was make producing each level as easy as possible. I explored making a level maker, but time didnt allow. Also, I thought that it would be just as much work to make it as to make the engine. So, what I wanted was for the design of the objects that live in my world not be too difficult. IE, I didnt want the designer to have to cut each piece of artwork up to the size of the tiles and then have me recreate it<br />
+in Flash. So instead, I made a workaround that allowed for an object to be placed in the world, via an XML description of where it lived, and what tiles around it would be unwalkable. Flash did all the rest. </p>
+<p><strong>5. Link</strong><br />
+<a href="http://www.kleenexpuppy.com.au/UltimatePuppyAdventure.asp">Here</a> is the engine in all its glory. Im pretty happy with it &#8211; i know it could be improved greatly, but I think for what I wanted from this project, it is a good result. I cant show the code for the project im afraid, seeing as it is a commercial project, but it follows the same ideas as outlined in the links above, with some small differences.</p>
+<p><strong>6. Future</strong><br />
+There are examples of Mario-style 3D from many years ago, like <a href="http://www.gotoandplay.it/_articles/2003/07/racing_engine.php">this one</a>, that make my little iso world seem old hat. And now, there is soo much more chances of developing cool and interesting 3D things for Flash, specifically because Flash 8 has added bitmap caching and blitting et al, that improve runtime performance exponentially. (some links : <a href="http://www.flashguru.co.uk/maelstrom/">here</a>, and <a href="http://lab.andre-michelle.com/">here</a>)</p>
+<p>All this means more chances for us Flash developers to do cool things. It&#8217;s just a matter of the right output for the right project.</p>
+								</div><!-- .entry-content -->
+	</div><!-- .content -->
+
+		<div class="info">
+					<p class="category-list">
+				Posted in <a href="http://djmci.github.com/blog/category/development/" title="View all posts in Development" rel="category tag">Development</a>, <a href="http://djmci.github.com/blog/category/interaction/" title="View all posts in Interaction" rel="category tag">Interaction</a>			</p>
+		
+		<p class="tag-list">Tags: <a href="http://djmci.github.com/blog/tag/web-dev/" rel="tag">Development</a>, <a href="http://djmci.github.com/blog/tag/interaction/" rel="tag">Interaction</a></p>
+		<p>
+			<span class="permalink"><a href="http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/" title="Permalink to Flash isometric engine" rel="bookmark">Permalink</a></span>
+
+							<span class="notes"><a href="http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/#comments" title="Comment on Flash isometric engine"><span class="dsq-postid" rel="7 http://djmci.github.com/blog/?p=7">2 Comments</span></a></span>
+					</p>
+
+			</div>
+</div><!-- /.post -->
+	<div class="pagination">
+		<p class="clearfix">
+			<a href="http://djmci.github.com/blog/2006/09/01/hello-spring-goodbye-to-winter/" rel="prev"><span class="older"><span class="meta-nav">&larr;</span> Previous post</span></a>			<a href="http://djmci.github.com/blog/2006/09/05/rubys-first-day/" rel="next"><span class="newer">Next post <span class="meta-nav">&rarr;</span></span></a>		</p>
+	</div>
+
+	
+<div id="disqus_thread">
+                    <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-52">
+        <div id="dsq-comment-header-52" class="dsq-comment-header">
+            <cite id="dsq-cite-52">
+                <span id="dsq-author-user-52">Scott Davies</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-52" class="dsq-comment-body">
+            <div id="dsq-comment-message-52" class="dsq-comment-message"><p>Hi Dan,</p>
+<p>Nice work on the game its brilliant!  Is it possible to get any weblinks that helped you in your development for this?  And any other tips and tricks?<br />
+Thanks<br />
+ Scott <img src='http://djmci.github.com/blog/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
+</div>
+        </div>
+    </li>
+
+    </li>
+    <li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="dsq-comment-53">
+        <div id="dsq-comment-header-53" class="dsq-comment-header">
+            <cite id="dsq-cite-53">
+                <span id="dsq-author-user-53">dan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-53" class="dsq-comment-body">
+            <div id="dsq-comment-message-53" class="dsq-comment-message"><p>Hey Scott, thanks for the cudos!</p>
+<p>The main links I looked at are in the post, but the real mind leap came from <a>Flash Game dev demystified</a>. It comes with a CD of examples, plus talks through some of the issues to overcome. </p>
+<p>I started by following on with their tutorials, but then soon realised that their approach wouldn&#8217;t be fast enough, and wouldn&#8217;t afford me some of the things I was looking for. Certainly there is a hell of a lot more that could be done to improve this engine.</p>
+<p>Also, I found that the basic schemas for describing worlds in XML weren&#8217;t strong enough (you can see some examples at Kirupa.com &#8211; just look for isometric). Id be happy to take a look at anything you&#8217;ve got and make suggestions&#8230;</p>
+</div>
+        </div>
+    </li>
+
+    </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://djmci.github.com/blog/2006/09/02/flash-isometric-engine/';
+    var disqus_identifier = '7 http://djmci.github.com/blog/?p=7';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'djmci';
+    var disqus_title = "Flash isometric engine";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            DISQUS.request.get('?cf_action=sync_comments&post_id=7');
+        });
+                    };
+    var facebookXdReceiverPath = 'http://djmci.github.com/blog/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/alien.local\/~dan\/shiftperception\/blog\/2006\/09\/02\/flash-isometric-engine\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.70';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+
+
+		</div><!-- /#content -->
+	</div><!-- /#wrapper -->
+
+	<div id="footer-frill"></div>
+	<div id="footer">
+		<div class="wrapper">
+		
+<div id="widgets" class="clearfix three">
+		<div id="first" class="widget-area">
+				<div id="recent-posts-2" class="clearfix widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://djmci.github.com/blog/2009/11/09/experimenting-with-typekit-com/" title="Experimenting with TypeKit.com">Experimenting with TypeKit.com</a></li>
+				<li><a href="http://djmci.github.com/blog/2009/09/05/trespassers-will-be-electrocuted/" title="Trespassers will be electrocuted!">Trespassers will be electrocuted!</a></li>
+				<li><a href="http://djmci.github.com/blog/2009/07/05/poster-collection-2-agam/" title="Poster Collection &#8211; 2 &#8211; AGAM">Poster Collection &#8211; 2 &#8211; AGAM</a></li>
+				<li><a href="http://djmci.github.com/blog/2009/07/05/le-tour-de-adobe/" title="Le Tour de Adobe">Le Tour de Adobe</a></li>
+				<li><a href="http://djmci.github.com/blog/2009/06/16/unique-records-in-as3/" title="Unique records in AS3">Unique records in AS3</a></li>
+				</ul>
+		</div>	</div><!-- #first .widget-area -->
+	
+		<div id="second" class="widget-area">
+		<div id="categories-2" class="clearfix widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-2"><a href="http://djmci.github.com/blog/category/design/" title="View all posts filed under Design">Design</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://djmci.github.com/blog/category/desktops/" title="View all posts filed under Desktops">Desktops</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://djmci.github.com/blog/category/development/" title="View all posts filed under Development">Development</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="http://djmci.github.com/blog/category/essays/" title="View all posts filed under Essays">Essays</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://djmci.github.com/blog/category/interaction/" title="View all posts filed under Interaction">Interaction</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://djmci.github.com/blog/category/postacrds/" title="View all posts filed under Postacrds">Postacrds</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://djmci.github.com/blog/category/thoughts/" title="View all posts filed under Thoughts">Thoughts</a>
+</li>
+		</ul>
+</div>	</div><!-- #second .widget-area -->
+	
+		<div id="third" class="widget-area">
+		<div id="archives-3" class="clearfix widget widget_archive"><h3 class="widget-title">Archives</h3>		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://djmci.github.com/blog/2009/11/'> November 2009 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2009/09/'> September 2009 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2009/07/'> July 2009 &nbsp;(2)</option>
+	<option value='http://djmci.github.com/blog/2009/06/'> June 2009 &nbsp;(2)</option>
+	<option value='http://djmci.github.com/blog/2009/05/'> May 2009 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2008/05/'> May 2008 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2008/03/'> March 2008 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2008/02/'> February 2008 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2007/12/'> December 2007 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2007/11/'> November 2007 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2007/10/'> October 2007 &nbsp;(2)</option>
+	<option value='http://djmci.github.com/blog/2007/09/'> September 2007 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2007/08/'> August 2007 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2007/07/'> July 2007 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2007/06/'> June 2007 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2007/05/'> May 2007 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2007/04/'> April 2007 &nbsp;(4)</option>
+	<option value='http://djmci.github.com/blog/2007/03/'> March 2007 &nbsp;(4)</option>
+	<option value='http://djmci.github.com/blog/2007/02/'> February 2007 &nbsp;(9)</option>
+	<option value='http://djmci.github.com/blog/2007/01/'> January 2007 &nbsp;(2)</option>
+	<option value='http://djmci.github.com/blog/2006/12/'> December 2006 &nbsp;(14)</option>
+	<option value='http://djmci.github.com/blog/2006/11/'> November 2006 &nbsp;(13)</option>
+	<option value='http://djmci.github.com/blog/2006/10/'> October 2006 &nbsp;(17)</option>
+	<option value='http://djmci.github.com/blog/2006/09/'> September 2006 &nbsp;(17)</option>
+	<option value='http://djmci.github.com/blog/2006/08/'> August 2006 &nbsp;(3)</option>
+	<option value='http://djmci.github.com/blog/2006/07/'> July 2006 &nbsp;(1)</option>
+	<option value='http://djmci.github.com/blog/2001/04/'> April 2001 &nbsp;(1)</option>
+ </select>
+</div><div id="search-3" class="clearfix widget widget_search"><form method="get" id="searchfield" action="http://djmci.github.com/blog/">
+	<input name="s" type="text" onfocus="if ( this.value=='Search' ) this.value='';" onblur="if ( this.value=='' ) this.value='Search';" value="Search" />
+</form>
+</div>	</div><!-- #third .widget-area -->
+	</div><!-- #widgets -->			<!--<p class="info-theme" role="contentinfo"><a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: Pink Touch 2 by <a href="http://automattic.com/" rel="designer">Automattic</a>.</p>-->
+		</div>
+	</div>
+
+
+</body>
+</html>
